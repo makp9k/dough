@@ -9,6 +9,22 @@
     chips[chip.getAttribute("data-category-chip")] = chip;
   });
 
+  var lastActive = null;
+
+  function scrollChipIntoView(chip) {
+    var scroller = chip.parentElement;
+    if (!scroller) return;
+    var chipLeft = chip.offsetLeft;
+    var chipRight = chipLeft + chip.offsetWidth;
+    var viewLeft = scroller.scrollLeft;
+    var viewRight = viewLeft + scroller.clientWidth;
+    if (chipLeft < viewLeft) {
+      scroller.scrollTo({ left: chipLeft - 16, behavior: "smooth" });
+    } else if (chipRight > viewRight) {
+      scroller.scrollTo({ left: chipRight - scroller.clientWidth + 16, behavior: "smooth" });
+    }
+  }
+
   function setActive(id) {
     Object.keys(chips).forEach(function (key) {
       if (key === id) {
@@ -17,6 +33,10 @@
         chips[key].classList.remove("is-active");
       }
     });
+    if (id !== lastActive && chips[id]) {
+      scrollChipIntoView(chips[id]);
+      lastActive = id;
+    }
   }
 
   function update() {
