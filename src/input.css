@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  html[lang="ru"] [data-lang="en"] {
+    display: none;
+  }
+  html[lang="en"] [data-lang="ru"] {
+    display: none;
+  }
+}
+
+@layer components {
+  .lang-btn.is-active {
+    @apply bg-ink text-bg;
+  }
+  .lang-btn:not(.is-active) {
+    @apply text-muted hover:text-ink;
+  }
+
+  .category-chip.is-active {
+    @apply bg-ink text-bg font-medium;
+  }
+  .category-chip.is-active:hover {
+    @apply text-bg;
+  }
+
+  .category-section {
+    scroll-margin-top: 5rem;
+  }
+}

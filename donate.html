@@ -1,0 +1,88 @@
+---
+layout: default
+permalink: /donate/
+hide_categories: true
+fullwidth: true
+---
+
+{%- assign d = site.data.donate -%}
+{%- assign raised_cents = d.raised | times: 100 | round -%}
+{%- assign goal_cents = d.goal | times: 100 | round -%}
+{%- if goal_cents > 0 -%}
+  {%- assign pct = raised_cents | times: 100 | divided_by: goal_cents -%}
+{%- else -%}
+  {%- assign pct = 0 -%}
+{%- endif -%}
+{%- if pct > 100 -%}{%- assign pct = 100 -%}{%- endif -%}
+
+<main class="px-6 pb-10 lg:pb-0 lg:px-10 xl:px-16 flex items-center lg:h-[calc(100vh-12rem)]">
+  <div class="w-full max-w-[1600px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 xl:gap-24 items-center">
+
+    <div class="flex items-center justify-center order-1 lg:order-none">
+      <img
+        src="{{ d.image | relative_url }}"
+        alt=""
+        onerror="this.onerror=null;this.src='{{ '/assets/images/menu/_placeholder.png' | relative_url }}';"
+        class="w-full max-w-sm lg:max-w-none lg:w-auto max-h-[40vh] lg:max-h-[72vh] object-contain isolate [will-change:filter] [filter:drop-shadow(0_25px_15px_rgba(0,0,0,0.85))_drop-shadow(0_45px_35px_rgba(0,0,0,0.7))]"
+      />
+    </div>
+
+    <div class="flex flex-col gap-6 lg:gap-8 xl:gap-10 order-2 lg:order-none">
+      <h1 class="font-script text-5xl md:text-6xl xl:text-7xl text-ink leading-[1.05]">
+        <span data-lang="ru">{{ site.data.i18n.donate.title.ru }}</span>
+        <span data-lang="en">{{ site.data.i18n.donate.title.en }}</span>
+      </h1>
+
+      <p class="text-muted text-base md:text-lg xl:text-xl max-w-xl">
+        <span data-lang="ru">{{ site.data.i18n.donate.description.ru }}</span>
+        <span data-lang="en">{{ site.data.i18n.donate.description.en }}</span>
+      </p>
+
+      <div>
+        <div class="flex items-baseline justify-between mb-3">
+          <div class="text-ink font-semibold text-2xl md:text-3xl xl:text-4xl tabular-nums">
+            {{ d.currency }}{{ d.raised }}
+            <span class="text-muted font-normal text-base md:text-lg xl:text-xl">
+              <span data-lang="ru">{{ site.data.i18n.donate.of.ru }}</span>
+              <span data-lang="en">{{ site.data.i18n.donate.of.en }}</span>
+              {{ d.currency }}{{ d.goal }}
+            </span>
+          </div>
+          <div class="text-ink font-semibold text-xl md:text-2xl xl:text-3xl tabular-nums">{{ pct }}%</div>
+        </div>
+        <div class="h-3 md:h-4 bg-surface rounded-full overflow-hidden">
+          <div class="h-full bg-ink rounded-full transition-all" style="width: {{ pct }}%"></div>
+        </div>
+      </div>
+
+      <div class="bg-surface rounded-3xl p-5 md:p-6 xl:p-8 flex items-center gap-5 md:gap-6 xl:gap-8 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]">
+        <a href="{{ d.paypal_url }}" target="_blank" rel="noopener" class="shrink-0 bg-white p-2 md:p-3 rounded-2xl">
+          <img
+            alt="PayPal QR"
+            src="{{ '/assets/images/paypal-qr.png' | relative_url }}"
+            class="block w-32 h-32 md:w-40 md:h-40 xl:w-52 xl:h-52"
+          />
+        </a>
+        <div class="flex-1 min-w-0 flex flex-col gap-2 md:gap-3">
+          <a
+            href="{{ d.paypal_url }}"
+            target="_blank"
+            rel="noopener"
+            class="inline-flex items-center justify-center gap-2 md:gap-3 bg-ink text-bg font-semibold rounded-full px-5 py-3 md:px-6 md:py-4 xl:px-8 xl:py-5 text-base md:text-lg xl:text-xl hover:opacity-90 transition-opacity"
+          >
+            <span class="w-5 h-5 md:w-6 md:h-6 xl:w-7 xl:h-7 shrink-0">
+              {% include icons/paypal.html %}
+            </span>
+            <span data-lang="ru">{{ site.data.i18n.donate.paypal_button.ru }}</span>
+            <span data-lang="en">{{ site.data.i18n.donate.paypal_button.en }}</span>
+          </a>
+          <p class="text-muted text-sm md:text-base">
+            <span data-lang="ru">{{ site.data.i18n.donate.scan_hint.ru }}</span>
+            <span data-lang="en">{{ site.data.i18n.donate.scan_hint.en }}</span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>

@@ -1,0 +1,7 @@
+---
+layout: default
+---
+
+{% for category in site.data.menu.categories %}
+  {% include category.html category=category %}
+{% endfor %}

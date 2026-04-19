@@ -1,0 +1,21 @@
+<nav
+  class="sticky top-0 z-40 bg-bg/90 backdrop-blur-md border-b border-white/5"
+  aria-label="Menu categories"
+>
+  <div class="max-w-6xl mx-auto px-6 py-3">
+    <div
+      class="flex items-center gap-2 overflow-x-auto scroll-smooth snap-x snap-mandatory [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+    >
+      {% for category in site.data.menu.categories %}
+        <a
+          href="#{{ category.id }}"
+          data-category-chip="{{ category.id }}"
+          class="category-chip px-4 py-2 rounded-full text-sm md:text-base whitespace-nowrap snap-start transition-colors bg-surface-2 text-muted hover:text-ink"
+        >
+          <span data-lang="ru">{{ category.name.ru }}</span>
+          <span data-lang="en">{{ category.name.en }}</span>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</nav>

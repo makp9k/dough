@@ -1,0 +1,13 @@
+<a
+  href="{{ '/donate/' | relative_url }}"
+  class="group block bg-surface hover:bg-surface-2 border-b border-white/5 transition-colors"
+>
+  <div class="max-w-6xl mx-auto px-6 py-2.5 flex items-center justify-center gap-2 text-sm text-muted group-hover:text-ink transition-colors">
+    <span class="w-4 h-4 text-ink shrink-0" aria-hidden="true">
+      {% include icons/heart.html %}
+    </span>
+    <span data-lang="ru">{{ site.data.i18n.donate.banner.ru }}</span>
+    <span data-lang="en">{{ site.data.i18n.donate.banner.en }}</span>
+    <span aria-hidden="true" class="transition-transform group-hover:translate-x-0.5">→</span>
+  </div>
+</a>

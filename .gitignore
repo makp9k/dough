@@ -1,0 +1,10 @@
+node_modules/
+_site/
+_gh-pages/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+Gemfile.lock
+package-lock.json
+.DS_Store
+temp/

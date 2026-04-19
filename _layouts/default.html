@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script>
+      (function () {
+        try {
+          var l = localStorage.getItem("leos-dough-lang");
+          if (l === "en" || l === "ru") document.documentElement.lang = l;
+        } catch (e) {}
+      })();
+    </script>
+    <title>{{ site.title }}</title>
+    <meta name="description" content="{{ site.data.i18n.meta_description.en }}" />
+    {% seo %}
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=DM+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
+  </head>
+  <body class="bg-bg text-ink font-sans antialiased">
+    {% unless page.url contains 'donate' %}
+      {% include donate-banner.html %}
+    {% endunless %}
+    {% include header.html %}
+    {% unless page.hide_categories %}
+      {% include categories-bar.html %}
+    {% endunless %}
+    {% if page.fullwidth %}
+      {{ content }}
+    {% else %}
+      <main class="max-w-6xl mx-auto px-6">
+        {{ content }}
+      </main>
+    {% endif %}
+    <footer class="py-10 text-center text-muted text-sm">
+      <span data-lang="ru">{{ site.data.i18n.footer.ru }}</span>
+      <span data-lang="en">{{ site.data.i18n.footer.en }}</span>
+    </footer>
+
+    <script src="{{ '/assets/js/lang.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/scroll-spy.js' | relative_url }}"></script>
+  </body>
+</html>

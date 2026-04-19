@@ -1,0 +1,18 @@
+title: "Leo's Dough"
+description: "Homemade bakery, made to order"
+url: "https://makp9k.github.io"
+baseurl: ""
+show_prices: true
+exclude:
+  - node_modules
+  - package.json
+  - package-lock.json
+  - tailwind.config.js
+  - postcss.config.js
+  - src
+  - README.md
+include:
+  - .nojekyll
+  - assets/images/menu/_placeholder.png
+plugins:
+  - jekyll-seo-tag

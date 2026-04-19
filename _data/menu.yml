@@ -1,0 +1,194 @@
+categories:
+  - id: pizza
+    name:
+      ru: Неаполитанская
+      en: Neapolitan
+    size:
+      ru: Ø 26 см
+      en: Ø 26 cm
+    items:
+      - name:
+          ru: Маргарита
+          en: Margherita
+        desc:
+          ru: Томатный соус, моцарелла
+          en: Tomato sauce, mozzarella
+        price: 6
+        image: /assets/images/menu/pizza-margherita.png
+
+      - name:
+          ru: Дьявола
+          en: Diavola
+        desc:
+          ru: Томатный соус, моцарелла, пикантная салями, халапеньо, острый мёд
+          en: Tomato sauce, mozzarella, spicy salami, jalapeño, hot honey
+        price: 8
+        image: /assets/images/menu/pizza-diavola.png
+
+      - name:
+          ru: Салями и лук
+          en: Salami & Onion
+        desc:
+          ru: Томатный соус, моцарелла, салями, маринованный красный лук
+          en: Tomato sauce, mozzarella, salami, pickled red onion
+        price: 8
+        image: /assets/images/menu/pizza-salami-onion.png
+
+      - name:
+          ru: Прошутто и грибы
+          en: Prosciutto & Funghi
+        desc:
+          ru: Томатный соус, моцарелла, прошутто, шампиньоны
+          en: Tomato sauce, mozzarella, prosciutto, champignons
+        price: 8
+        image: /assets/images/menu/pizza-prosciutto-funghi.png
+
+      - name:
+          ru: Груша и сыр
+          en: Pear & Cheese
+        desc:
+          ru: Моцарелла, мягкий сыр, груша, грецкие орехи, мёд
+          en: Mozzarella, soft cheese, pear, walnuts, honey
+        price: 8
+        image: /assets/images/menu/pizza-pear-cheese.png
+
+      - name:
+          ru: Курица и ананас
+          en: Chicken & Pineapple
+        desc:
+          ru: Томатный соус, моцарелла, курица, ананас, сладкая паприка
+          en: Tomato sauce, mozzarella, chicken, pineapple, sweet paprika
+        price: 8
+        image: /assets/images/menu/pizza-chicken-pineapple.png
+
+      - name:
+          ru: Хот-дог
+          en: Hot Dog
+        desc:
+          ru: Томатный соус, моцарелла, сосиски, солёный огурец, жареный лук
+          en: Tomato sauce, mozzarella, sausages, pickles, fried onion
+        price: 8
+        image: /assets/images/menu/pizza-hotdog.png
+
+      - name:
+          ru: Мясная
+          en: Meat & Peppers
+        desc:
+          ru: Томатный соус, моцарелла, салями, прошутто, красный лук, печёный перец
+          en: Tomato sauce, mozzarella, salami, prosciutto, red onion, roasted peppers
+        price: 8
+        image: /assets/images/menu/pizza-meat-peppers.png
+
+      - name:
+          ru: Салями и черри
+          en: Salami & Cherry
+        desc:
+          ru: Томатный соус, моцарелла, салями, помидоры черри
+          en: Tomato sauce, mozzarella, salami, cherry tomatoes
+        price: 8
+        image: /assets/images/menu/pizza-salami-cherry.png
+
+  - id: detroit
+    name:
+      ru: Детройтская
+      en: Detroit
+    size:
+      ru: 15 × 20 см
+      en: 15 × 20 cm
+    items:
+      - name:
+          ru: Салями
+          en: Salami
+        desc:
+          ru: Томатный соус, моцарелла, пикантная салями, пармезан, базилик
+          en: Tomato sauce, mozzarella, spicy salami, parmesan, basil
+        price: 10
+        image: /assets/images/menu/pizza-detroit-salami.png
+
+      - name:
+          ru: Сальсичча
+          en: Salsiccia
+        desc:
+          ru: Томатный соус, моцарелла, сальсичча, печёные перцы, острый мёд, пармезан, базилик
+          en: Tomato sauce, mozzarella, salsiccia, roasted peppers, hot honey, parmesan, basil
+        price: 10
+        image: /assets/images/menu/pizza-detroit-salsiccia.png
+
+      - name:
+          ru: Водка
+          en: Vodka
+        desc:
+          ru: Соус водка, моцарелла, пикантная салями, маринованный халапеньо, острый мёд, базилик
+          en: Vodka sauce, mozzarella, spicy salami, pickled jalapeño, hot honey, basil
+        price: 10
+        image: /assets/images/menu/pizza-detroit-vodka.png
+
+      - name:
+          ru: Барбекю
+          en: BBQ
+        desc:
+          ru: Соус барбекю, моцарелла, курица, ананас, бальзамический соус, базилик
+          en: BBQ sauce, mozzarella, chicken, pineapple, balsamic, basil
+        price: 10
+        image: /assets/images/menu/pizza-detroit-bbq.png
+
+  - id: calzone
+    name:
+      ru: Кальцоне
+      en: Calzone
+    size:
+      ru: Ø 20 см
+      en: Ø 20 cm
+    items:
+      - name:
+          ru: Прошутто и грибы
+          en: Prosciutto & Funghi
+        desc:
+          ru: Томатный соус, моцарелла, прошутто, грибы
+          en: Tomato sauce, mozzarella, prosciutto, mushrooms
+        price: 6
+        image: /assets/images/menu/calzone-prosciutto-funghi.png
+
+      - name:
+          ru: Салями и халапеньо
+          en: Salami & Jalapeño
+        desc:
+          ru: Томатный соус, моцарелла, салями, халапеньо
+          en: Tomato sauce, mozzarella, salami, jalapeño
+        price: 6
+        image: /assets/images/menu/calzone-salami-jalapeno.png
+
+  - id: khachapuri
+    name:
+      ru: Хачапури
+      en: Khachapuri
+    size:
+      ru: Ø 24 см
+      en: Ø 24 cm
+    items:
+      - name:
+          ru: По-мегрельски
+          en: Megruli
+        desc:
+          ru: Моцарелла и фета
+          en: Mozzarella and feta
+        price: 12
+        image: /assets/images/menu/khachapuri-megruli.png
+
+      - name:
+          ru: Кубдари
+          en: Kubdari
+        desc:
+          ru: Свино-говяжий фарш, лук, специи
+          en: Pork and beef mince, onion, spices
+        price: 12
+        image: /assets/images/menu/khachapuri-kubdari.png
+
+      - name:
+          ru: По-аджарски
+          en: Adjaruli
+        desc:
+          ru: Моцарелла, фета, яичный желток
+          en: Mozzarella, feta, egg yolk
+        price: 10
+        image: /assets/images/menu/khachapuri-adjaruli.png

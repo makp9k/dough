@@ -1,0 +1,28 @@
+meta_description:
+  ru: "Домашняя выпечка на заказ"
+  en: "Homemade bakery, made to order"
+footer:
+  ru: "© Leo's Dough"
+  en: "© Leo's Dough"
+donate:
+  banner:
+    ru: "Коплю на спиральный миксер — поддержи"
+    en: "Funding a spiral mixer — support me"
+  title:
+    ru: "Коплю на спиральный миксер"
+    en: "Funding a spiral mixer"
+  description:
+    ru: "Профессиональный спиральный миксер для идеального замеса — помогите собрать на него"
+    en: "A professional spiral mixer for perfectly kneaded dough — help me fund it"
+  paypal_button:
+    ru: "Поддержать на PayPal"
+    en: "Donate via PayPal"
+  scan_hint:
+    ru: "или отсканируй QR"
+    en: "or scan the QR"
+  progress_label:
+    ru: "Собрано"
+    en: "Raised"
+  of:
+    ru: "из"
+    en: "of"
