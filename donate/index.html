@@ -64,7 +64,26 @@
 
     
     
-      <main class="px-6 pb-10 lg:pb-0 lg:px-10 xl:px-16 flex items-center lg:h-[calc(100vh-12rem)]">
+      <style>
+  .donate-progress-bar {
+    display: block;
+    width: 100%;
+    height: 12px;
+    background-color: #1c1c1c;
+    border-radius: 9999px;
+    overflow: hidden;
+  }
+  .donate-progress-fill {
+    display: block;
+    height: 100%;
+    background-color: #ffffff;
+  }
+  @media (min-width: 768px) {
+    .donate-progress-bar { height: 16px; }
+  }
+</style>
+
+<main class="px-6 pb-10 lg:pb-0 lg:px-10 xl:px-16 flex items-center lg:h-[calc(100vh-12rem)]">
   <div class="w-full max-w-[1600px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 xl:gap-24 items-center">
 
     <div class="flex items-center justify-center order-1 lg:order-none">
@@ -99,8 +118,8 @@
           </div>
           <div class="text-ink font-semibold text-xl md:text-2xl xl:text-3xl tabular-nums">22%</div>
         </div>
-        <div class="relative h-3 md:h-4 rounded-full overflow-hidden" style="background-color: #1c1c1c;">
-          <div class="absolute top-0 bottom-0 left-0" style="width: 22%; background-color: #ffffff;"></div>
+        <div class="donate-progress-bar">
+          <div class="donate-progress-fill" style="width: 22%;"></div>
         </div>
       </div>
 
